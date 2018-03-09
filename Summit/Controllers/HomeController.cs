@@ -71,6 +71,8 @@ namespace Summit.Controllers
             //            System.Threading.Thread.Sleep(5000);
             // Await the task to wait until upload is completed and get the download url from the task variable
             var downloadUrl = task;   //unable to get the url, need some fix
+
+            var ss = task.TargetUrl;
         }
         
 
