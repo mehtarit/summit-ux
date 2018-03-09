@@ -51,21 +51,23 @@
                             <li><a class="page-scroll" href="#section-intro">Objectives</a></li>
                             <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
                             <li><a class="page-scroll" href="#section-ajenda">Agenda</a></li>
-                            <li><a class="page-scroll" href="#section-pricing">Traveller's Notes</a></li>
-                            <li><a class="page-scroll" href="#section-partner">Links</a></li>
+                            <li><a class="page-scroll" href="#section-graduationprofiles">Graduation</a></li>
+                            @*<li><a class="page-scroll" href="#section-pricing">Traveller's Notes</a></li>
+                            <li><a class="page-scroll" href="#section-partner">Links</a></li>*@
                             <li><a class="page-scroll" href="#section-venue">Venue</a></li>
                             <li><a class="page-scroll" href="#section-feedback">Feedback</a></li>
                         </ul>
                     </div>
+                    <div></div>
                     <div class="navbar-right" style="
-    display:  block;
-    position:  relative;
-    left: 878px;
-    top: 11px;
-    font-weight:  bold;
-">
+                         display: block;
+                         position: relative;
+                         left: 878px;
+                         top: 11px;
+                         font-weight: bold;
+                         ">
                         <div class="form-group">
-                            <select>
+                            <select selected="@ViewBag.Program">
                                 <option>ITDP</option>
                                 <option>ITLP</option>
                                 <option>Leader</option>
@@ -79,14 +81,21 @@
         </header>
         <div class="jumbotron text-center">
             <div class="content">
-                <div class="event-date">MAY 08–10, 2018, AUSTIN</div>
+                <div class="event-date">MAY 08–10, 2018</div>
+                <h1>Hello, @ViewBag.Region!!</h1>
                 <h1>ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
-                <p class="lead">Loads of fun-filled activities, some interesting sessions and cool games. Scroll down to know more</p>
+                @if (ViewBag.Program.ToLower() == "itdp")
+                {
+                    <p class="lead">Loads of fun-filled activities, some interesting sessions and cool games. Scroll down to know more</p>
+                }
+                else
+                {
+                    <p class="lead">Meet fellow leaders and Dell rockstars from across the globe. Scroll down to know more</p>
+                }
                 <button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#registrationModal">REGISTER YOURSELF</button>
             </div>
         </div>
         <!-- .Jumbotron-->
-
         <section id="section-intro" class="section-wrapper about-event">
             <div class="container">
                 <div class="row">
@@ -354,7 +363,6 @@
                             <time>05:30 - 06:15PM</time>
                             <h3>Drum Jam</h3>
                         </div>
-
                     </div>
                     <div class="col-md-4">
                         <h3>DAY 3</h3>
@@ -394,7 +402,172 @@
             </div>
         </section>
 
-        <section id="section-pricing" class="section-wrapper pricing-section gray-bg">
+        <section id="section-graduationprofiles" class="section-wrapper team gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title">
+                            <h1>GRADUATION</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-1.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Tom Hoffmann
+                                    <small>Cintas</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-2.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Zoe Krämer
+                                    <small>Earthlink</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-3.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Helena Kühn
+                                    <small>Herman</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-4.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Leon Werner
+                                    <small>Level</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-5.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Alexander Ziegler
+                                    <small>A.G. Edwards</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-6.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Benedikt
+                                    <small>Fitch Co.</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-7.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Lara Hahn
+                                    <small>Acterna</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                    <div class="col-sm-6 col-md-3">
+                        <figure class="thumbnail">
+                            <a href="#"><img src="~/img/img-team-8.jpg" class="img-responsive" alt="Image"></a>
+                            <figcaption class="caption text-center">
+                                <h3>
+                                    Elias Friedrichs
+                                    <small>Adolph</small>
+                                </h3>
+                                <ul class="social-links">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                                </ul>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <!-- /.col-sm-6 -->
+                </div>
+                <!-- .row -->
+            </div>
+            <!-- /.container -->
+            <!-- /.container -->
+        </section>
+        @*<section id="section-pricing" class="section-wrapper pricing-section gray-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -460,10 +633,9 @@
                 <!-- /.row -->
             </div>
             <!-- /.container -->
-        </section>
+        </section>*@
         <!-- .pricing-section -->
-
-        <section id="section-partner" class="section-wrapper client-logo">
+      @* <section id="section-partner" class="section-wrapper client-logo">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -494,10 +666,10 @@
                 </div>
             </div>
             <!--end of .container -->
-        </section>
+        </section> *@
+        
         <!-- .client-logo -->
-
-        <section id="section-venue" class="section-wrapper  gray-bg">
+        <section id="section-venue" class="section-wrapper">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -515,7 +687,7 @@
                 </div>
             </div>
         </section>
-        <section id="section-feedback" class="section-wrapper  client-logo" style="margin-bottom:0px">
+        <section id="section-feedback" class="section-wrapper  client-logo gray-bg" style="margin-bottom:0px">
             <div class="container">
                 <!-- .row-->
                 <div class="row">
@@ -554,10 +726,8 @@
                                 <button type="submit" class="btn btn-primary btn-sm" style="float:right">Upload</button>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </div>
         </section>
         <footer class="footer">
@@ -581,7 +751,6 @@
     </div>
     <div id="registrationModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -594,8 +763,14 @@
                         <div class="form-group">
                             <label for="firstName" class="col-sm-3 control-label">Full Name</label>
                             <div class="col-sm-9">
-                                <input type="text" id="firstName" placeholder="Full Name" class="form-control" autofocus>
+                                <input type="text" id="firstName" placeholder="Skype For Business name" class="form-control" autofocus>
                                 <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="badgeid" class="col-sm-3 control-label">Badge ID</label>
+                            <div class="col-sm-9">
+                                <input type="text" id="badgeid" placeholder="BadgeID" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -684,7 +859,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- #main-wrapper -->

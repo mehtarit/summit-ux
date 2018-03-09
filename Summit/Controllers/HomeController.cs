@@ -8,9 +8,11 @@ namespace Summit.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string Region,string Program)
         {
             ViewBag.Title = "Home Page";
+            ViewBag.Region = Region;
+            ViewBag.Program = Program;
 
             return View();
         }
