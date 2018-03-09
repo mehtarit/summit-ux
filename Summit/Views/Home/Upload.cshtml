@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    ViewBag.Title = "Upload";
+}
+
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -15,8 +21,6 @@
     <link href="~/Content/font-awesome.min.css" rel="stylesheet">
     <!-- Style CSS -->
     <link href="~/Content/style.css" rel="stylesheet">
-
-    <link href="~/Content/image_preview.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -88,7 +92,6 @@
             </div>
         </div>
         <!-- .Jumbotron-->
-
         <section id="section-intro" class="section-wrapper about-event">
             <div class="container">
                 <div class="row">
@@ -356,7 +359,6 @@
                             <time>05:30 - 06:15PM</time>
                             <h3>Drum Jam</h3>
                         </div>
-
                     </div>
                     <div class="col-md-4">
                         <h3>DAY 3</h3>
@@ -395,7 +397,6 @@
                 </div>
             </div>
         </section>
-
         <section id="section-pricing" class="section-wrapper pricing-section gray-bg">
             <div class="container">
                 <div class="row">
@@ -464,7 +465,6 @@
             <!-- /.container -->
         </section>
         <!-- .pricing-section -->
-
         <section id="section-partner" class="section-wrapper client-logo">
             <div class="container">
                 <div class="row">
@@ -498,7 +498,6 @@
             <!--end of .container -->
         </section>
         <!-- .client-logo -->
-
         <section id="section-venue" class="section-wrapper  gray-bg">
             <div class="container">
                 <div class="row">
@@ -539,40 +538,27 @@
                         </form>
                     </div>
                 </div>
-
-
-
-                @using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-
-
-
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title" style="text-align:left">
-                        <h3>Share your pictures collection</h3>
-                        <p>We can make a repository and share it with you all!</p>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <span class="btn btn-primary btn-file">
-                                    Browse… <input type="file" id="file" name="file" value="" onchange="readURL(this);">
-                                </span>
-                            </span>
-                            <input type="text" class="form-control" readonly style="width:85%">
-                            <button type="submit" class="btn btn-primary btn-sm" style="float:right">Upload</button>
+                <form class="form-horizontal" action="@Url.Action("Information","Home")" method="post" role="form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-title" style="text-align:left">
+                                <h3>Share your pictures collection</h3>
+                                <p>We can make a repository and share it with you all!</p>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            Browse… <input type="file" id="imgInp">
+                                        </span>
+                                    </span>
+                                    <input type="text" class="form-control" readonly style="width:85%">
+                                    <button type="submit" class="btn btn-primary btn-sm" style="float:right">Upload</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <img id="blah" src="http://placehold.it/180" alt="your image" />
-                </div>
-            </div>
-
-}
- 
-
-
-
+                </form> <!-- /form -->
             </div>
         </section>
         <footer class="footer">
@@ -596,7 +582,6 @@
     </div>
     <div id="registrationModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
@@ -699,12 +684,9 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- #main-wrapper -->
-
-    <script src="~/Scripts/image_preview.js"></script>
     <!-- jquery -->
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
     <!-- Bootstrap -->
