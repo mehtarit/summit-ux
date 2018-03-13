@@ -80,8 +80,8 @@ function register() {
     var city = $("#city").val();
     var country = $("#country").val();
     var tshirtSize = $("#tshirtSize").val();
-    var meal = $("#meal").val();
-    var gender = $("#gender").val();
+    var meal = $('input[name=meal]:checked').val();
+    var gender = $("input[name=gender]:checked").val();
     var data = {
         username: name,
         region: city,
