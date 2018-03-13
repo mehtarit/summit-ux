@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Program = "ITDP";
+    ViewBag.Region = "Austin";
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -50,10 +54,10 @@
                             <li class="hidden"><a href="#page-top"></a></li>
                             <li><a class="page-scroll" href="#section-intro">Objectives</a></li>
                             <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
-                            <li><a class="page-scroll" href="#section-ajenda">Agenda</a></li>
+                            <li><a class="page-scroll" href="#section-agenda">Agenda</a></li>
                             <li><a class="page-scroll" href="#section-graduationprofiles">Graduation</a></li>
                             @*<li><a class="page-scroll" href="#section-pricing">Traveller's Notes</a></li>
-                            <li><a class="page-scroll" href="#section-partner">Links</a></li>*@
+                                <li><a class="page-scroll" href="#section-partner">Links</a></li>*@
                             <li><a class="page-scroll" href="#section-venue">Venue</a></li>
                             <li><a class="page-scroll" href="#section-feedback">Feedback</a></li>
                         </ul>
@@ -82,8 +86,8 @@
         <div class="jumbotron text-center">
             <div class="content">
                 <div class="event-date">MAY 08–10, 2018</div>
-                <h1>Hello, @ViewBag.Region!!</h1>
-                <h1>ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
+                <h1 style="font-size:50px">Hello, @ViewBag.Region!!</h1>
+                <h1 style="font-size:50px">ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
                 @if (ViewBag.Program.ToLower() == "itdp")
                 {
                     <p class="lead">Loads of fun-filled activities, some interesting sessions and cool games. Scroll down to know more</p>
@@ -102,10 +106,15 @@
                     <div class="col-md-8">
                         <h2>OUR OBJECTIVES</h2>
                         <p class="lead">
-                            Quickly disintermediate empowered methodologies with ubiquitous best practices. Distinctively fabricate exceptional niches with technically sound technologies. Professionally revolutionize seamless synergy with real-time imperatives. Interactively pursue top-line bandwidth whereas visionary e-services.
+                            <ul style="list-style-type:disc; font-weight:normal">
+                                <li>Increase technical skills, innovative thinking, and/or professional capabilities to further enable our Digital Transformation.</li>
+                                <li>Increase understanding of company vision and customer needs, and provide key insights from WWLM, FRS, and Dell Technologies World.</li>
+                                <li>Establish a strong career development network among participants and leaders.</li>
+                            </ul>
                         </p>
-                        <p class="lead">
-                            Distinctively benchmark client-focused opportunities vis-a-vis 24/365 relationships. Progressively revolutionize equity invested synergy whereas emerging web services.
+                        <h2>PURPOSE</h2>
+                        <p class="lead" style="font-weight:normal">
+                            To dedicate time for personal and professional growth by providing accelerated learning focused on Strategy, Customers, and Innovation.
                         </p>
                     </div>
                     <div class="col-md-4">
@@ -113,7 +122,7 @@
                         <strong>
                             MAY 08-10, AUSTIN
                             <br />JUNE 20-22, INDIA
-                            <br />JUNE 26-27, KUALUMPUR
+                            <br />JUNE 26-27, KUALUMPUR2
                         </strong>
                     </div>
                 </div>
@@ -138,12 +147,6 @@
                                     Tom Hoffmann
                                     <small>Cintas</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -156,12 +159,6 @@
                                     Zoe Krämer
                                     <small>Earthlink</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -174,12 +171,6 @@
                                     Helena Kühn
                                     <small>Herman</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -192,13 +183,6 @@
                                     Leon Werner
                                     <small>Level</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -214,12 +198,6 @@
                                     Alexander Ziegler
                                     <small>A.G. Edwards</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -232,12 +210,6 @@
                                     Benedikt
                                     <small>Fitch Co.</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -250,12 +222,6 @@
                                     Lara Hahn
                                     <small>Acterna</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -268,13 +234,6 @@
                                     Elias Friedrichs
                                     <small>Adolph</small>
                                 </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
                             </figcaption>
                         </figure>
                     </div>
@@ -286,7 +245,7 @@
             <!-- /.container -->
         </section>
         <!-- .team -->
-        <section id="section-ajenda" class="section-wrapper section-ajenda">
+        <section id="section-agenda" class="section-wrapper section-ajenda">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -409,265 +368,151 @@
                         <div class="section-title">
                             <h1>GRADUATION</h1>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-1.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Tom Hoffmann
-                                    <small>Cintas</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-2.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Zoe Krämer
-                                    <small>Earthlink</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-3.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Helena Kühn
-                                    <small>Herman</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-4.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Leon Werner
-                                    <small>Level</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                </div>
-                <!-- .row -->
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-5.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Alexander Ziegler
-                                    <small>A.G. Edwards</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-6.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Benedikt
-                                    <small>Fitch Co.</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-7.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Lara Hahn
-                                    <small>Acterna</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                    <div class="col-sm-6 col-md-3">
-                        <figure class="thumbnail">
-                            <a href="#"><img src="~/img/img-team-8.jpg" class="img-responsive" alt="Image"></a>
-                            <figcaption class="caption text-center">
-                                <h3>
-                                    Elias Friedrichs
-                                    <small>Adolph</small>
-                                </h3>
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-                                </ul>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <!-- /.col-sm-6 -->
-                </div>
-                <!-- .row -->
-            </div>
-            <!-- /.container -->
-            <!-- /.container -->
+                        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
+                            </div>
+                            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
+                                <div style="background-color:white">
+                                    <img data-u="image" src="~/img/img-team-1.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-2.jpg" />
+                                </div>
+                                <div style="background-color:white">
+                                    <img data-u="image" src="~/img/img-team-6.jpg" style="height:150px" />
+                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
+                                        Ved Misra
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-4.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-5.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-6.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-7.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-8.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-1.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-2.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-3.jpg" />
+                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
+                                        Sudeshna Dash
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix" style="height:30px"></div>
+                        <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
+                            </div>
+                            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
+                                <div style="background-color:white">
+                                    <img data-u="image" src="~/img/img-team-1.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-2.jpg" />
+                                </div>
+                                <div style="background-color:white">
+                                    <img data-u="image" src="~/img/img-team-6.jpg" style="height:150px" />
+                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
+                                        Ved Misra
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-5.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-6.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-4.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-2.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-7.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-8.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-1.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-4.jpg" />
+                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
+                                        Sudeshna Dash
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row clearfix" style="height:30px"></div>
+                        <div id="jssor_3" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
+                            </div>
+                            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
+                                <div style="background-color:white">
+                                    <img data-u="image" src="~/img/img-team-1.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-2.jpg" />
+                                </div>
+                                <div style="background-color:white">
+                                    <img data-u="image" src="~/img/img-team-6.jpg" style="height:150px" />
+                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
+                                        Ved Misra
+                                    </div>
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-5.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-6.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-4.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-2.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-7.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-8.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-1.jpg" />
+                                </div>
+                                <div>
+                                    <img data-u="image" src="~/img/img-team-4.jpg" />
+                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
+                                        Sudeshna Dash
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         </section>
-        @*<section id="section-pricing" class="section-wrapper pricing-section gray-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h1>TRAVELLER'S NOTES</h1>
-                            <p>Plan your stay and explore the place</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="pricing-table-default text-center">
-                            <div class="pricing-head">
-                                <h3>INSTRUCTIONS</h3>
-                            </div>
-                            <div class="pricing-detail">
-                                <ul class="pricing-list pink-i">
-                                    <li>Main keynote speeches</li>
-                                    <li>Access to all areas</li>
-                                    <li>Lunch on day 1</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn btn-primary">READ MORE</a>
-                        </div>
-                        <!-- /.pricing-table-wrapper -->
-                    </div>
-                    <!-- .col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="pricing-table-default text-center">
-                            <div class="pricing-head">
-                                <h3>CHECKLIST</h3>
-                            </div>
-                            <div class="pricing-detail">
-                                <ul class="pricing-list pink-i">
-                                    <li>Main keynote speeches</li>
-                                    <li>Access to all areas</li>
-                                    <li>Lunch on day 1</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn btn-primary">READ MORE</a>
-                        </div>
-                        <!-- /.pricing-table-wrapper -->
-                    </div>
-                    <!-- .col-sm-4 -->
-                    <div class="col-sm-4">
-                        <div class="pricing-table-default text-center">
-                            <div class="pricing-head">
-                                <h3>THINGS TO DO</h3>
-                            </div>
-                            <div class="pricing-detail">
-                                <ul class="pricing-list pink-i">
-                                    <li>Main keynote speeches</li>
-                                    <li>Access to all areas</li>
-                                    <li>Lunch on day 1</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="btn btn-primary">READ MORE</a>
-                        </div>
-                        <!-- /.pricing-table-wrapper -->
-                    </div>
-                    <!-- .col-sm-4 -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </section>*@
-        <!-- .pricing-section -->
-      @* <section id="section-partner" class="section-wrapper client-logo">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h1>SOME IMPORTANT LINKS</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                        <a href="#"><img src="~/img/logo-client-1.jpg" alt="Image"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                        <a href="#"><img src="~/img/logo-client-2.jpg" alt="Image"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                        <a href="#"><img src="~/img/logo-client-3.jpg" alt="Image"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                        <a href="#"><img src="~/img/logo-client-4.jpg" alt="Image"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                        <a href="#"><img src="~/img/logo-client-5.jpg" alt="Image"></a>
-                    </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6 section-margin">
-                        <a href="#"><img src="~/img/logo-client-6.jpg" alt="Image"></a>
-                    </div>
-                </div>
-            </div>
-            <!--end of .container -->
-        </section> *@
-        
+        <!-- #endregion Jssor Slider End -->
         <!-- .client-logo -->
         <section id="section-venue" class="section-wrapper">
             <div class="container">
@@ -675,7 +520,6 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h1>THE VENUE</h1>
-                            <p>Credibly recaptiualize cutting-edge functionalities vis-a-vis intuitive growth strategies. Appropriately evolve open-source potentialities via goal-oriented e-business. Enthusiastically target go forward scenarios and visionary "outside the box" thinking. Professionally administrate cost effective sources without corporate convergence.</p>
                         </div>
                     </div>
                 </div>
@@ -722,7 +566,7 @@
                                         Browse… <input type="file" id="imgInp">
                                     </span>
                                 </span>
-                                <input type="text" class="form-control" readonly style="width:85%">
+                                <input type="text" class="form-control" readonly style="width:85%;background-color:#fff">
                                 <button type="submit" class="btn btn-primary btn-sm" style="float:right">Upload</button>
                             </div>
                         </div>
@@ -730,14 +574,21 @@
                 </div>
             </div>
         </section>
-        <footer class="footer">
+        <section class="section-wrapper">
             <div class="copyright-section">
                 <div class="container">
                     <div class="row" style="margin-bottom:40px">
                         <h2>GET IN TOUCH WITH US</h2>
-                        <div class="col-md-2"><span><a href="mailto:marie_gunning@dell.com" style="color:black;font-weight:300">Marie Gunning</a></span></div>
-                        <div class="col-md-2"><span><a href="mailto:neeli_kelly@dell.com" style="color:black;font-weight:300">Neeli Kelly</a></span></div>
-                        <div class="col-md-2"><span><a href="mailto:barsha_paul@dell.com" style="color:black;font-weight:300">Barsha Paul</a></span></div>
+                        <div class="col-md-2">
+                            <span><a href="mailto:marie_gunning@dell.com" style="color:black;font-weight:300">Marie Gunning</a></span>
+                            <div style="font-size:11px">Program Management</div>
+                            <div style="font-size:11px">Austin</div>
+                        </div>
+                        <div class="col-md-2">
+                            <span><a href="mailto:neeli_kelly@dell.com" style="color:black;font-weight:300">Neeli Kelly</a></span>
+                            <div style="font-size:11px">Program Management</div>
+                            <div style="font-size:11px">Austin</div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="copytext text-center">&copy; Dell Technologies. All rights reserved </div>
@@ -746,7 +597,7 @@
                 <!-- .container -->
             </div>
             <!-- .copyright-section -->
-        </footer>
+        </section>
         <!-- .footer -->
     </div>
     <div id="registrationModal" class="modal fade" role="dialog">
@@ -759,24 +610,23 @@
                 </div>
                 <div class="modal-body">
                     <form class="form-horizontal" role="form">
-                        <h2>Registration Form</h2>
                         <div class="form-group">
                             <label for="firstName" class="col-sm-3 control-label">Full Name</label>
                             <div class="col-sm-9">
-                                <input type="text" id="firstName" placeholder="Skype For Business name" class="form-control" autofocus>
+                                <input type="text" id="name" placeholder="Skype For Business name" class="form-control" autofocus>
                                 <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="badgeid" class="col-sm-3 control-label">Badge ID</label>
                             <div class="col-sm-9">
-                                <input type="text" id="badgeid" placeholder="BadgeID" class="form-control">
+                                <input type="text" id="badgeid" placeholder="Badge ID" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-sm-3 control-label">City</label>
                             <div class="col-sm-9">
-                                <input type="text" id="email" placeholder="City" class="form-control">
+                                <input type="text" id="city" placeholder="City" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">
@@ -792,10 +642,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password" class="col-sm-3 control-label">ROLE</label>
+                            <label for="password" class="col-sm-3 control-label">PROGRAM</label>
                             <div class="col-sm-9">
-                                <select id="role" class="form-control">
-                                    <option disabled selected="selected">SELECT YOUR ROLE</option>
+                                <select id="program" class="form-control">
+                                    <option disabled selected="selected">SELECT YOUR PROGRAM</option>
                                     <option>ITDP</option>
                                     <option>ITLP</option>
                                     <option>LEADER</option>
@@ -806,7 +656,7 @@
                         <div class="form-group">
                             <label for="birthDate" class="col-sm-3 control-label">T-SHIRT SIZE</label>
                             <div class="col-sm-9">
-                                <select id="role" class="form-control">
+                                <select id="tshirtSize" class="form-control">
                                     <option disabled selected="selected">SELECT YOUR T-SHIRT SIZE</option>
                                     <option>S</option>
                                     <option>M</option>
@@ -822,12 +672,12 @@
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
-                                            <input type="radio" id="femaleRadio" value="Female">Female
+                                            <input type="radio" id="gender" value="Female">Female
                                         </label>
                                     </div>
                                     <div class="col-sm-4">
                                         <label class="radio-inline">
-                                            <input type="radio" id="maleRadio" value="Male">Male
+                                            <input type="radio" id="gender" value="Male">Male
                                         </label>
                                     </div>
                                 </div>
@@ -838,19 +688,19 @@
                             <div class="col-sm-9">
                                 <div class="checkbox">
                                     <label>
-                                        <input type="radio" id="calorieCheckbox" value="Low calorie"> Vegetarian
+                                        <input type="radio" id="meal" value="Vegetarian"> Vegetarian
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="radio" id="saltCheckbox" value="Low salt"> Non-Vegetarian
+                                        <input type="radio" id="meal" value="Non-Vegetarian"> Non-Vegetarian
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-9 col-sm-offset-3">
-                                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                <button type="submit" class="btn btn-primary btn-block" onclick="register()">Register</button>
                             </div>
                         </div>
                     </form> <!-- /form -->
@@ -864,6 +714,7 @@
     <!-- #main-wrapper -->
     <!-- jquery -->
     <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jssor.slider.min.js"></script>
     <!-- Bootstrap -->
     <script src="~/Scripts/bootstrap.min.js"></script>
     <!-- Plugin JavaScript -->
