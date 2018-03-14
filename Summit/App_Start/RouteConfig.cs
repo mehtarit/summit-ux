@@ -15,8 +15,8 @@ namespace Summit
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{region}/{program}",
+                defaults: new { controller = "Home", action = "Index", region="Hyd",program="ITDP" }
             );
         }
     }
