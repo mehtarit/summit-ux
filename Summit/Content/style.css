@@ -313,7 +313,7 @@ button:focus,
     padding               : 0;
     margin                : 0;
     height                : 100vh;
-    min-height            : 700px;
+    min-height            : 1000px;
     vertical-align        : middle;
     position              : relative;
     background-attachment : fixed;
@@ -356,6 +356,51 @@ button:focus,
 .jumbotron .btn {
     margin-top : 40px;
     }
+.jumbotron .content a.region {
+    
+    color: white;
+    font-size: 25px;
+    font-weight:500;
+    font-variant-caps:all-petite-caps;
+    /*border: 5px solid white;
+    border-radius:15px;*/
+    padding: 9px;
+    margin: 5px;
+}
+.jumbotron .content a.hover-region{
+   border: 3px solid white;
+    border-radius:15px;
+}
+.jumbotron .content a.selected-region{
+    color:black;
+    background-color:white;
+    border-radius:15px;
+}
+
+.jumbotron .content a.program {
+    
+    color: white;
+    font-size: 25px;
+    font-weight:500;
+    font-variant-caps:all-petite-caps;
+    /*border: 5px solid white;
+    border-radius:15px;*/
+    padding: 5px;
+    margin: 5px;
+}
+.jumbotron .content a.hover-program{
+   border: 3px solid white;
+    border-radius:15px;
+}
+.jumbotron .content a.selected-program{
+    color:black;
+    background-color:white;
+    border-radius:15px;
+}
+
+.jumbotron .content div.section-divider{
+    border-right:solid 2px white;
+}
 
 @media (max-width : 600px) {
     .jumbotron .content {
@@ -369,6 +414,17 @@ button:focus,
     .jumbotron .content p.lead {
         font-size : 15px;
         }
+    .jumbotron .content a.region {
+        font-size:15px;
+        min-height:auto;
+        }
+    .jumbotron .content a.program {
+        font-size:15px;
+        min-height:auto;
+        }
+    .jumbotron .content div.section-divider{
+    border-right: hidden 2px white;
+}
     }
 
 /*---------------------------
@@ -481,13 +537,13 @@ button:focus,
 /* --------------------------
  * Agenda
  *---------------------------*/
-.section-ajenda .session {
+.section-agenda .session {
     padding       : 15px 0;
     border-left   : 1px solid #eeeeee;
     margin-bottom : 15px;
     }
 
-.section-ajenda .session time {
+.section-agenda .session time {
     font-size:13px;
     padding       : 0px 25px 0px;
     border-bottom : 1px solid #eeeeee;
@@ -495,18 +551,18 @@ button:focus,
     font-weight:300;
     }
 
-.section-ajenda .session h2 {
+.section-agenda .session h2 {
     margin : 20px 0 0 20px;
     }
 
-.section-ajenda .session h3 {
+.section-agenda .session h3 {
     margin         : 10px 0 10px 20px;
     font-weight:400;
     font-size      : 15px;
     text-transform : uppercase;
     }
 
-.section-ajenda .session h3 span {
+.section-agenda .session h3 span {
     font-size   : 14px;
     display     : block;
     line-height : 1;
@@ -748,6 +804,13 @@ button:focus,
     animation-duration: 1.6s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.summit_logo{
+    padding-top:20px;
+    color:cornflowerblue !important;
+    font-weight:700;
+    font-size:large;
 }
 
 @keyframes jssorl-009-spin {
