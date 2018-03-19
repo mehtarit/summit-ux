@@ -1,43 +1,108 @@
 ﻿$(document).ready(function ($) {
-    var jssor_1_options = {
-        $AutoPlay: 1,
-        $Idle: 0,
-        $SlideDuration: 5000,
-        $SlideEasing: $Jease$.$Linear,
-        $PauseOnHover: 4,
-        $SlideWidth: 150,
-        $Align: 0
-    };
 
-    var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
-    var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_1_options);
-    var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_1_options);
-    /*#region responsive code begin*/
+    if ($('#section-graduationprofiles').length > 0) {
+        var jssor_1_options = {
+            $AutoPlay: 1,
+            $Idle: 0,
+            $SlideDuration: 5000,
+            $SlideEasing: $Jease$.$Linear,
+            $PauseOnHover: 4,
+            $SlideWidth: 150,
+            $Align: 0
+        };
 
-    var MAX_WIDTH = 1000;
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+        var jssor_2_slider = new $JssorSlider$("jssor_2", jssor_1_options);
+        var jssor_3_slider = new $JssorSlider$("jssor_3", jssor_1_options);
+        /*#region responsive code begin*/
 
-    function ScaleSlider() {
-        var containerElement = jssor_1_slider.$Elmt.parentNode;
-        var containerElement = jssor_2_slider.$Elmt.parentNode;
-        var containerElement = jssor_3_slider.$Elmt.parentNode;
-        var containerWidth = containerElement.clientWidth;
+        var MAX_WIDTH = 1000;
 
-        if (containerWidth) {
+        function ScaleSlider() {
+            var containerElement = jssor_1_slider.$Elmt.parentNode;
+            var containerElement = jssor_2_slider.$Elmt.parentNode;
+            var containerElement = jssor_3_slider.$Elmt.parentNode;
+            var containerWidth = containerElement.clientWidth;
 
-            var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+            if (containerWidth) {
 
-            jssor_1_slider.$ScaleWidth(expectedWidth);
+                var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                jssor_1_slider.$ScaleWidth(expectedWidth);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
         }
-        else {
-            window.setTimeout(ScaleSlider, 30);
-        }
+
+        ScaleSlider();
     }
-
-    ScaleSlider();
+    
 
     $(window).bind("load", ScaleSlider);
     $(window).bind("resize", ScaleSlider);
     $(window).bind("orientationchange", ScaleSlider);
+
+    $('.region,.program').hover(function () {
+
+        $(this).addClass("hover-region");
+
+    }, function () {
+        $(this).removeClass("hover-region");
+    });
+    $('.region').on('click', function () {
+        $('.selected-region').removeClass("selected-region");
+        $(this).addClass("selected-region");
+        var region = $(this).text();
+        var program = $('.selected-program').text();
+        if (region != "" && program != "") {
+            //alert("Refreshing page based on region- " + program + "|" + region);
+            reloadPage(region, program);
+        }
+    });
+    $('.program').on('click', function () {
+        $('.selected-program').removeClass("selected-program");
+        $(this).addClass("selected-program");
+        var program = $(this).text();
+        var region = $('.selected-region').text();
+        if (region != "" && program != "") {
+            // alert("Refreshing page based on program - "+program+"|"+region);
+            reloadPage(region, program);
+
+        }
+    });
+
+    function getBaseUrl(address) {
+
+        var path = "";
+        if (window.location.hostname.toLowerCase() == "localhost") {
+            path = location.protocol + "//" + location.host + "/";
+        }
+        else {
+            path = location.protocol + "//" + location.host + "/";
+            //path = location.protocol + "//" + location.host + "/" + location.pathname.split('/')[1] + "/";
+        }
+        return path;
+    }
+
+    function reloadPage(region, program) {
+        location.href = getBaseUrl() + "Home/Index?Region=" + region + "&Program=" + program;
+        //$.ajax({
+        //    contentType: "application/json; charset=utf-8",
+        //    url: 'Index',
+        //    type: 'post',
+        //    data: JSON.stringify({
+        //        Region: region,
+        //        Program: program
+        //    }),
+        //    success: function (result) {
+        //        alert("Data has been added successfully.");
+        //    },
+        //    error: function (result) {
+        //        alert("Error while inserting data");
+        //    }
+        //});
+    }
 
     $(document).on('change', '.btn-file :file', function () {
         var input = $(this),
@@ -69,9 +134,11 @@
         }
     }
 
+
     $("#imgInp").change(function () {
         readURL(this);
     });
+
 });
 function register() {
     var name = $("#name").val();
