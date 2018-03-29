@@ -182,7 +182,7 @@ button:focus,
 .navbar-brand {
     padding : 0;
     height  : auto;
-    margin  : 5px 0 !important;
+    margin  : 5px 0 ;
     }
 
 @media (max-width : 768px) {
@@ -190,7 +190,7 @@ button:focus,
         width : 200px;
         }
 
-    .navbar-brand ~/img {
+    .navbar-brand img {
         max-width : 100%;
         height    : auto;
         }
@@ -321,7 +321,23 @@ button:focus,
     background-position   : center center;
     overflow              : hidden;
     }
+@media all and (min-width:381px) and (max-width: 568px) {
+    .jumbotron {
+        height: 160vh;
+    }
+    #uploadbtn {
+        padding-top: 10px;
+    }
+}
 
+@media all and (min-width:321px) and (max-width: 380px) {
+    .jumbotron {
+        height: 223vh;
+    }
+    #uploadbtn{
+        padding-top:10px;
+    }
+}
 .jumbotron .content {
     color             : #ffffff;
     position          : absolute;
@@ -488,7 +504,7 @@ button:focus,
         }
     }
 
-.team .thumbnail ~/img {
+.team .thumbnail img {
     width : 100%;
     }
 
@@ -647,7 +663,7 @@ button:focus,
  * Client Logo 
  *---------------------------*/
 
-.client-logo a ~/img {
+.client-logo a img {
     width              : 100%;
     opacity            : 1;
     -webkit-transition : all 0.8s ease 0s;
@@ -656,7 +672,7 @@ button:focus,
     transition         : all 0.8s ease 0s;
     }
 
-.client-logo a:hover ~/img {
+.client-logo a:hover img {
     opacity : .5;
     }
 
@@ -942,7 +958,7 @@ figure.effect-bubba:hover {
         position: relative;
         float: left;
         overflow: hidden;
-        margin: 0px 1%;
+        margin: 0px 6%;
         min-width: 270px;
         width: 48%;
         

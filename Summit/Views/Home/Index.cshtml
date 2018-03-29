@@ -264,7 +264,7 @@ var program = '@ViewBag.Program'
                                 <a href="#">View more</a>
                             </figcaption>
                         </figure>
-                        <h2>Zoe <span>Kramer</span></h2>
+                        <h2>Zoe Kramer</h2>
                     </div>
                 </div>
                 <!-- /.col-sm-6 -->
@@ -468,45 +468,52 @@ var program = '@ViewBag.Program'
                         <p>We can make a repository and share it with you all!</p>
                     </div>
                     <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <span class="btn btn-primary btn-file">
-                                    Browse… <input type="file" id="imgInp">
+                        <div class="col-md-1 col-xs-1 col-sm-1">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file">
+                                        Browse… <input type="file" id="imgInp">
+                                    </span>
                                 </span>
-                            </span>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-sm-11 col-xs-11">
                             <input type="text" class="form-control" readonly style="width:85%;background-color:#fff">
+                        </div>
+                        <div class="col-md-1 col-sm-12 col-xs-12 clearfix" id="uploadbtn">
                             <button type="submit" class="btn btn-primary btn-sm" style="float:right" onclick="readURL()">Upload</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+</div>
     </section>
-    <section class="section-wrapper">
-        <div class="copyright-section">
-            <div class="container">
-                <div class="row" style="margin-bottom:40px">
-                    <h2>GET IN TOUCH WITH US</h2>
-                    <div class="col-md-2">
-                        <span><a href="mailto:marie_gunning@dell.com" style="color:black;font-weight:300">Marie Gunning</a></span>
-                        <div style="font-size:11px">Program Management</div>
-                        <div style="font-size:11px">Austin</div>
-                    </div>
-                    <div class="col-md-2">
-                        <span><a href="mailto:neeli_kelly@dell.com" style="color:black;font-weight:300">Neeli Kelly</a></span>
-                        <div style="font-size:11px">Program Management</div>
-                        <div style="font-size:11px">Austin</div>
-                    </div>
+<section class="section-wrapper">
+    <div class="copyright-section">
+        <div class="container">
+            <div class="row" style="margin-bottom:40px">
+                <h2>GET IN TOUCH WITH US</h2>
+                <div class="col-md-2">
+                    <span><a href="mailto:marie_gunning@dell.com" style="color:black;font-weight:300">Marie Gunning</a></span>
+                    <div style="font-size:11px">Program Management</div>
+                    <div style="font-size:11px">Austin</div>
                 </div>
-                <div class="col-md-12">
-                    <div class="copytext text-center">&copy; Dell Technologies. All rights reserved </div>
+                <div class="col-md-2">
+                    <span><a href="mailto:neeli_kelly@dell.com" style="color:black;font-weight:300">Neeli Kelly</a></span>
+                    <div style="font-size:11px">Program Management</div>
+                    <div style="font-size:11px">Austin</div>
                 </div>
             </div>
-            <!-- .container -->
+            <div class="col-md-12">
+                <div class="copytext text-center">&copy; Dell Technologies. All rights reserved </div>
+            </div>
         </div>
-        <!-- .copyright-section -->
-    </section>
-    <!-- .footer -->
+        <!-- .container -->
+    </div>
+    <!-- .copyright-section -->
+</section>
+<!-- .footer -->
 </div>
 <div id="registrationModal" class="modal fade" role="dialog">
     <div class="modal-dialog">

@@ -170,7 +170,12 @@
 
         }
     });
+    $('a').click(function (e) {
+        // Special stuff to do when this link is clicked...
 
+        // Cancel the default action
+        e.preventDefault();
+    });
     function getBaseUrl(address) {
 
         var path = "";
@@ -186,21 +191,6 @@
 
     function reloadPage(region, program) {
         location.href = getBaseUrl() + "Home/Index?Region=" + region + "&Program=" + program;
-        //$.ajax({
-        //    contentType: "application/json; charset=utf-8",
-        //    url: 'Index',
-        //    type: 'post',
-        //    data: JSON.stringify({
-        //        Region: region,
-        //        Program: program
-        //    }),
-        //    success: function (result) {
-        //        alert("Data has been added successfully.");
-        //    },
-        //    error: function (result) {
-        //        alert("Error while inserting data");
-        //    }
-        //});
     }
 
     $(document).on('change', '.btn-file :file', function () {

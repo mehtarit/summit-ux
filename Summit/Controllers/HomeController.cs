@@ -57,9 +57,23 @@ namespace Summit.Controllers
             else
                 ViewBag.Programs = new string[] { "ITDP", "ITLP"};
             if (Region == "India")
+            {
                 ViewBag.Date = "June 20-22, 2018";
+                if (Program == "ITLP Cohort 1" || Program == "ITLP Cohort 2")
+                {
+                    ViewBag.Program = "ITLP";
+                    Program = "ITLP";
+                }
+            }
             if (Region == "Malaysia")
+            {
                 ViewBag.Date = "June 26-27, 2018";
+                if (Program == "ITLP Cohort 1" || Program == "ITLP Cohort 2")
+                {
+                    ViewBag.Program = "ITLP";
+                    Program = "ITLP";
+                }
+            }
             if (Region == "Austin")
                 ViewBag.Date = "May 08-10, 2018";
             ViewBag.LatLngs = new KeyValuePair<string, string>[] {  new KeyValuePair<string, string>("Austin", "30.266620,-97.740375"),
