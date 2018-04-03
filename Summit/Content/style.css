@@ -1025,3 +1025,18 @@ figure.effect-bubba:hover {
             font-size: 12px;
             font-weight:500;
         }
+
+        .travelernotes li{
+            border-top: 1px solid black;
+            padding-left:20px;
+                padding-right:20px;
+                padding-top:5px;
+        }
+        .travelerchecklist{
+    list-style-type: circle;
+}
+            .travelerchecklist li {
+                padding-left:20px;
+                padding-right:20px;
+                padding-top:5px;
+            }

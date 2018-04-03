@@ -431,6 +431,41 @@ var program = '@ViewBag.Program'
                     <div id="googleMap"></div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-4 text-center section-divider">
+                        <h3>Traveler's notes</h3>
+                        <p>Might we suggest…</p>
+                        <ul class="travelernotes">
+                            @{ 
+                                foreach(Summit.Controllers.HomeController.EventSession e in ViewBag.TravelerNotes)
+                                {
+                                    <li>
+                                        <h4>@e.Time</h4>
+                                        <p>@e.Title</p>
+                                        <h5>@e.Location</h5>
+                                        <p>@e.Extra</p>
+                                        <a href="@e.Source">@e.Source</a>
+                                    </li>
+                                }
+                            }
+                        </ul>
+                </div>
+                <div class="col-md-2"></div>
+                <div class="col-md-4 text-center">
+                        <h3>Checklist</h3>
+                        <p>Check these major @ViewBag.Region landmarks off your bucket list:</p>
+                        <ul class="travelerchecklist">
+                            @{ 
+                                foreach(String s in ViewBag.Checklist)
+                                {
+                                    <li>@s</li>
+                                }
+                            }
+                        </ul>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
         </div>
     </section>
     <section id="section-feedback" class="section-wrapper  client-logo gray-bg" style="margin-bottom:0px">
