@@ -11,7 +11,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <ul class="navbar-nav nav">
-                        <li><a class="summit_logo" href="#page-top">@ViewBag.Region @ViewBag.Program Summit 2018</a></li>
+                        <li><a class="summit_logo" href="#page-top">@ViewBag.Region Summit 2018</a></li>
                     </ul>
 
                 </div>
@@ -21,12 +21,9 @@
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li class="hidden"><a href="#page-top"></a></li>
                         <li><a class="page-scroll" href="#section-intro">Objectives</a></li>
-                        <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
                         <li><a class="page-scroll" href="#section-agenda">Agenda</a></li>
-                        @if (((string)ViewBag.Program).ToLower().Equals("itdp"))
-                        {
-                            <li><a class="page-scroll" href="#section-graduationprofiles">Graduation</a></li>
-                        }
+                        <li><a class="page-scroll" href="#section-speaker">Speakers</a></li>
+                        <li><a class="page-scroll" href="#section-graduationprofiles">Graduation</a></li>
                         @*<li><a class="page-scroll" href="#section-pricing">Traveller's Notes</a></li>
                             <li><a class="page-scroll" href="#section-partner">Links</a></li>*@
                         <li><a class="page-scroll" href="#section-venue">Venue</a></li>
@@ -37,12 +34,17 @@
             <!-- /.container -->
         </nav>
         <!-- .nav -->
+
+        <script>
+ var region = '@ViewBag.Region'
+var program = '@ViewBag.Program'
+        </script>
     </header>
     <div class="jumbotron text-center">
         <div class="content">
-            <div class="event-date">MAY 08–10, 2018</div>
-            <h1>Hello, @ViewBag.Region!!</h1>
-            <h1>ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
+            <div class="event-date">@ViewBag.Date</div>
+            <h1 style="font-size:50px">Hello, @ViewBag.Region!!</h1>
+            <h1 style="font-size:50px">ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
             @if (ViewBag.Program.ToLower() == "itdp")
             {
                 <p class="lead">
@@ -154,130 +156,13 @@
                     <strong>
                         MAY 08-10, AUSTIN
                         <br />JUNE 20-22, INDIA
-                        <br />JUNE 26-27, KUALUMPUR2
+                        <br />JUNE 26-27, MALAYSIA
                     </strong>
                 </div>
             </div>
         </div>
     </section>
-    <!-- .about-event -->
-    <section id="section-speaker" class="section-wrapper team gray-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>SPEAKERS</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-1.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Tom Hoffmann
-                                <small>Cintas</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-2.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Zoe Krämer
-                                <small>Earthlink</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-3.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Helena Kühn
-                                <small>Herman</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-4.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Leon Werner
-                                <small>Level</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-            </div>
-            <!-- .row -->
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-5.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Alexander Ziegler
-                                <small>A.G. Edwards</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-6.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Benedikt
-                                <small>Fitch Co.</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-7.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Lara Hahn
-                                <small>Acterna</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-                <div class="col-sm-6 col-md-3">
-                    <figure class="thumbnail">
-                        <a href="#"><img src="~/img/img-team-8.jpg" class="img-responsive" alt="Image"></a>
-                        <figcaption class="caption text-center">
-                            <h3>
-                                Elias Friedrichs
-                                <small>Adolph</small>
-                            </h3>
-                        </figcaption>
-                    </figure>
-                </div>
-                <!-- /.col-sm-6 -->
-            </div>
-            <!-- .row -->
-        </div>
-        <!-- /.container -->
-        <!-- /.container -->
-    </section>
-    <!-- .team -->
-    <section id="section-agenda" class="section-wrapper section-agenda">
+    <section id="section-agenda" class="section-wrapper section-agenda team gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -291,182 +176,245 @@
                     int i = 1;
                     foreach (Summit.Controllers.HomeController.EventDay day in ViewBag.Agenda)
                     {
-                        <div class="col-md-4">
-                            <h3>Day @i</h3>
-                            @foreach (Summit.Controllers.HomeController.EventSession session in day.Sessions)
-                            {
-                                <div class="session">
-                                    <time>@session.Time</time>
-                                    <h3>@session.Title</h3>
-                                </div>
-                            }
-                            @{
-                                i++;
-                            }
-
-                        </div>
+                        if (ViewBag.Region == "Austin" && ViewBag.Program.ToLower() != "itdp")
+                        {
+                            <div class="col-md-3">
+                                <h3>Day @i</h3>
+                                <span style="font-size:17px;position:relative;top:-17px">@day.location</span>
+                                @foreach (Summit.Controllers.HomeController.Groups group in day.Groups)
+                                {
+                                    <div class="session">
+                                        @foreach (Summit.Controllers.HomeController.EventSession session in group.Sessions)
+                                        {
+                                            <time>@session.Time</time>
+                                            <h3>
+                                                @session.Title
+                                                <span>@session.Extra</span>
+                                            </h3>
+                                        }
+                                    </div>
                                 }
+                            </div>
+                            i++;
+                        }
+                        else
+                        {
+                            <div class="col-md-4">
+                                <h3>Day @i</h3>
+                                <span style="font-size:17px;position:relative;top:-17px">@day.location</span>
+                                @foreach (Summit.Controllers.HomeController.Groups group in day.Groups)
+                                {
+                                    <div class="session">
+                                        @foreach (Summit.Controllers.HomeController.EventSession session in group.Sessions)
+                                        {
+                                            <time>@session.Time</time>
+                                            <h3>
+                                                @session.Title
+                                                <span>@session.Extra</span>
+                                            </h3>
+                                        }
+                                    </div>
+                                }
+                            </div>
+                            i++;
+                        }
+                    }
                 }
-
-
             </div>
         </div>
     </section>
+    <!-- .about-event -->
+    <section id="section-speaker" class="section-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>SPEAKERS</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-1.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Tom Hoffman</h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-2.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Zoe Kramer</h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-3.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Helena <span>Kuhn</span></h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-4.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Alex <span>Ellan</span></h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+            </div>
+            <!-- .row -->
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-5.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Alexander <span>Keisgner</span></h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-6.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Lara Hahn</h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-7.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Adolph</h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+                <div class="col-sm-6 col-md-3">
+                    <div class="grid">
+                        <figure class="effect-bubba">
+                            <img src="~/img/img-team-8.jpg" alt="img02" />
+                            <figcaption>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Sed nunc, quod agimus; Quamquam id quidem, infinitum est in hac urbe;
+                                    Id enim volumus, id contendimus, ut officii fructus sit ipsum officium.
+                                </p>
+                                <a href="#">View more</a>
+                            </figcaption>
+                        </figure>
+                        <h2>Elias <span>Friedricks</span></h2>
+                    </div>
+                </div>
+                <!-- /.col-sm-6 -->
+            </div>
+            <!-- .row -->
+        </div>
+        <!-- /.container -->
+        <!-- /.container -->
+    </section>
+    <!-- .team -->
 
-    @if (((string)ViewBag.Program).ToLower().Equals("itdp"))
-    {
-        <section id="section-graduationprofiles" class="section-wrapper team gray-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title">
-                            <h1>GRADUATION</h1>
+    <section id="section-graduationprofiles" class="section-wrapper team gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>GRADUATION</h1>
+                    </div>
+                    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
                         </div>
-                        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
-                            <!-- Loading Screen -->
-                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
-                            </div>
-                            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
-                                <div style="background-color:white">
-                                    <img data-u="image" src="~/img/img-team-1.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-2.jpg" />
-                                </div>
-                                <div style="background-color:white">
-                                    <img data-u="image" src="~/img/img-team-6.jpg" style="height:150px" />
-                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
-                                        Ved Misra
-                                    </div>
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-4.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-5.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-6.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-7.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-8.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-1.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-2.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-3.jpg" />
-                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
-                                        Sudeshna Dash
-                                    </div>
-                                </div>
-                            </div>
+                        <div data-u="slides" class="group1slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
                         </div>
-                        <div class="row clearfix" style="height:30px"></div>
-                        <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
-                            <!-- Loading Screen -->
-                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
-                            </div>
-                            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
-                                <div style="background-color:white">
-                                    <img data-u="image" src="~/img/img-team-1.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-2.jpg" />
-                                </div>
-                                <div style="background-color:white">
-                                    <img data-u="image" src="~/img/img-team-6.jpg" style="height:150px" />
-                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
-                                        Ved Misra
-                                    </div>
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-5.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-6.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-4.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-2.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-7.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-8.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-1.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-4.jpg" />
-                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
-                                        Sudeshna Dash
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="row clearfix" style="height:30px"></div>
+                    <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
                         </div>
-                        <div class="row clearfix" style="height:30px"></div>
-                        <div id="jssor_3" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
-                            <!-- Loading Screen -->
-                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-                                <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
-                            </div>
-                            <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
-                                <div style="background-color:white">
-                                    <img data-u="image" src="~/img/img-team-1.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-2.jpg" />
-                                </div>
-                                <div style="background-color:white">
-                                    <img data-u="image" src="~/img/img-team-6.jpg" style="height:150px" />
-                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
-                                        Ved Misra
-                                    </div>
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-5.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-6.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-4.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-2.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-7.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-8.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-1.jpg" />
-                                </div>
-                                <div>
-                                    <img data-u="image" src="~/img/img-team-4.jpg" />
-                                    <div style="position:absolute;top:175px;left:25px;width:150px;z-index:0;font-size:16px;color:#000000;line-height:24px;text-align:center;padding:5px;box-sizing:border-box;">
-                                        Sudeshna Dash
-                                    </div>
-                                </div>
-                            </div>
+                        <div data-u="slides" class="group2slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
                         </div>
-        </section>
-    }
+                    </div>
+                    <div class="row clearfix" style="height:30px"></div>
+                    <div id="jssor_3" style="position:relative;margin:0 auto;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;visibility:hidden;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="~/Content/spin.svg" />
+                        </div>
+                        <div data-u="slides" class="group3slides" style="cursor:default;position:relative;top:0px;left:0px;width:1000px;height:150px;overflow:hidden;">
+                        </div>
+                    </div>
+    </section>
     <!-- .client-logo -->
     <section id="section-venue" class="section-wrapper">
         <div class="container">
@@ -497,13 +445,19 @@
                     <form id="contactForm" class="subscribe-form" method="POST">
                         <div class="form-group">
                             <label for="sessionName" class="sr-only">Session Name</label>
-                            <input type="email" class="form-control" required="" id="sessionName" name="email" placeholder="Enter the session Name">
+                            <select id="sessionName" class="form-control">
+                                <option disabled selected="selected">SELECT A SESSION</option>
+                                @foreach (string session in ViewBag.Sessions)
+                                {
+                                    <option value="@session">@session</option>
+                                }
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="feedback" class="sr-only">Feedback</label>
                             <textarea class="form-control" required="" id="feedback" name="email" placeholder="Enter your Feedback"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-sm">Submit Feedback</button>
+                        <button type="submit" class="btn btn-primary btn-sm" onclick="submitFeedback()">Submit Feedback</button>
                     </form>
                 </div>
             </div>
@@ -514,45 +468,52 @@
                         <p>We can make a repository and share it with you all!</p>
                     </div>
                     <div class="form-group">
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <span class="btn btn-primary btn-file">
-                                    Browse… <input type="file" id="imgInp">
+                        <div class="col-md-1 col-xs-1 col-sm-1">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <span class="btn btn-primary btn-file">
+                                        Browse… <input type="file" id="imgInp">
+                                    </span>
                                 </span>
-                            </span>
+                            </div>
+                        </div>
+                        <div class="col-md-10 col-sm-11 col-xs-11">
                             <input type="text" class="form-control" readonly style="width:85%;background-color:#fff">
-                            <button type="submit" class="btn btn-primary btn-sm" style="float:right">Upload</button>
+                        </div>
+                        <div class="col-md-1 col-sm-12 col-xs-12 clearfix" id="uploadbtn">
+                            <button type="submit" class="btn btn-primary btn-sm" style="float:right" onclick="readURL()">Upload</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+</div>
     </section>
-    <section class="section-wrapper">
-        <div class="copyright-section">
-            <div class="container">
-                <div class="row" style="margin-bottom:40px">
-                    <h2>GET IN TOUCH WITH US</h2>
-                    <div class="col-md-2">
-                        <span><a href="mailto:marie_gunning@dell.com" style="color:black;font-weight:300">Marie Gunning</a></span>
-                        <div style="font-size:11px">Program Management</div>
-                        <div style="font-size:11px">Austin</div>
-                    </div>
-                    <div class="col-md-2">
-                        <span><a href="mailto:neeli_kelly@dell.com" style="color:black;font-weight:300">Neeli Kelly</a></span>
-                        <div style="font-size:11px">Program Management</div>
-                        <div style="font-size:11px">Austin</div>
-                    </div>
+<section class="section-wrapper">
+    <div class="copyright-section">
+        <div class="container">
+            <div class="row" style="margin-bottom:40px">
+                <h2>GET IN TOUCH WITH US</h2>
+                <div class="col-md-2">
+                    <span><a href="mailto:marie_gunning@dell.com" style="color:black;font-weight:300">Marie Gunning</a></span>
+                    <div style="font-size:11px">Program Management</div>
+                    <div style="font-size:11px">Austin</div>
                 </div>
-                <div class="col-md-12">
-                    <div class="copytext text-center">&copy; Dell Technologies. All rights reserved </div>
+                <div class="col-md-2">
+                    <span><a href="mailto:neeli_kelly@dell.com" style="color:black;font-weight:300">Neeli Kelly</a></span>
+                    <div style="font-size:11px">Program Management</div>
+                    <div style="font-size:11px">Austin</div>
                 </div>
             </div>
-            <!-- .container -->
+            <div class="col-md-12">
+                <div class="copytext text-center">&copy; Dell Technologies. All rights reserved </div>
+            </div>
         </div>
-        <!-- .copyright-section -->
-    </section>
-    <!-- .footer -->
+        <!-- .container -->
+    </div>
+    <!-- .copyright-section -->
+</section>
+<!-- .footer -->
 </div>
 <div id="registrationModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -565,9 +526,9 @@
             <div class="modal-body">
                 <form class="form-horizontal" role="form">
                     <div class="form-group">
-                        <label for="firstName" class="col-sm-3 control-label">Full Name</label>
+                        <label for="firstName" class="col-sm-3 control-label">Preferred Name</label>
                         <div class="col-sm-9">
-                            <input type="text" id="name" placeholder="Skype For Business name" class="form-control" autofocus>
+                            <input type="text" id="name" placeholder="Preferred name" class="form-control" autofocus>
                             <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
                         </div>
                     </div>
@@ -584,38 +545,38 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="country" class="col-sm-3 control-label">Country</label>
+                        <label for="program" class="col-sm-3 control-label">PROGRAM</label>
                         <div class="col-sm-9">
-                            <select id="country" class="form-control">
+                            <select id="country1" class="form-control">
                                 <option disabled selected="selected">SELECT YOUR COUNTRY</option>
-                                <option>AUSTIN</option>
-                                <option>INDIA</option>
-                                <option>MALAYSIA</option>
-                                <option>IRELAND</option>
+                                <option value="AUSTIN">AUSTIN</option>
+                                <option value="INDIA">INDIA</option>
+                                <option value="MALAYSIA">MALAYSIA</option>
+                                <option value="IRELAND">IRELAND</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="password" class="col-sm-3 control-label">PROGRAM</label>
+                        <label for="program" class="col-sm-3 control-label">PROGRAM</label>
                         <div class="col-sm-9">
                             <select id="program" class="form-control">
                                 <option disabled selected="selected">SELECT YOUR PROGRAM</option>
-                                <option>ITDP</option>
-                                <option>ITLP</option>
-                                <option>LEADER</option>
-                                <option>OTHERS</option>
+                                <option value="ITDP">ITDP</option>
+                                <option value="ITLP">ITLP</option>
+                                <option value="LEADER">LEADER</option>
+                                <option value="OTHERS">OTHERS</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="birthDate" class="col-sm-3 control-label">T-SHIRT SIZE</label>
+                        <label for="tshirtSize" class="col-sm-3 control-label">T-SHIRT SIZE</label>
                         <div class="col-sm-9">
                             <select id="tshirtSize" class="form-control">
                                 <option disabled selected="selected">SELECT YOUR T-SHIRT SIZE</option>
-                                <option>S</option>
-                                <option>M</option>
-                                <option>L</option>
-                                <option>XL</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
                             </select>
                         </div>
                     </div>
@@ -638,18 +599,9 @@
                         </div>
                     </div> <!-- /.form-group -->
                     <div class="form-group">
-                        <label class="control-label col-sm-3">Meal Preference</label>
+                        <label class="control-label col-sm-3">Dietary Restrictions</label>
                         <div class="col-sm-9">
-                            <div class="checkbox">
-                                <label>
-                                    <input type="radio" id="meal" name="meal" value="Vegetarian"> Vegetarian
-                                </label>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="radio" id="meal" name="meal" value="Non-Vegetarian"> Non-Vegetarian
-                                </label>
-                            </div>
+                            <input type="text" id="meal" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">

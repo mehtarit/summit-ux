@@ -69,7 +69,11 @@ jQuery(function ($) {
             var $kualatitude = 3.153875,
                  $kualongitude = 101.714669;
             //google map custom marker icon
-            var $marker_url = window.location.pathname+'/img/google-map-marker.png';
+            var url = window.location.pathname;
+            var mainurl = window.location.host;
+            url = url.split('/');
+            //google map custom marker icon
+            var $marker_url = "http://" + mainurl + '/' + url[1] + '/img/google-map-marker.png';
 
             //we define here the style of the map
             var style = [{
@@ -83,10 +87,22 @@ jQuery(function ($) {
                     "lightness" : 5
                 }]
             }];
-
+            var $latitude, $longitude;
+            if (region === "India") {
+                $latitude = $indlatitude,
+                    $longitude = $indlongitude
+            }
+            else if (region === "Malaysia") {
+                $latitude = $kualatitude,
+                    $longitude = $kualongitude
+            }
+            else {
+                $latitude = $auslatitude,
+                    $longitude = $auslongitude
+            }
             //set google map options
             var map_options = {
-                center: new google.maps.LatLng($auslatitude, $auslongitude),
+                center: new google.maps.LatLng($latitude, $longitude),
                 zoom              : $map_zoom,
                 panControl        : false,
                 zoomControl       : false,
@@ -101,7 +117,7 @@ jQuery(function ($) {
             var map = new google.maps.Map(document.getElementById('googleMap'), map_options);
             //add a custom marker to the map
             var marker = new google.maps.Marker({
-                position: new google.maps.LatLng($auslatitude, $auslongitude),
+                position: new google.maps.LatLng($latitude, $longitude),
                 map      : map,
                 visible  : true,
                 icon     : $marker_url
