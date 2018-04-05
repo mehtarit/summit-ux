@@ -23,6 +23,8 @@ namespace Summit.Controllers
             public string Time;
             public string Title;
             public string Extra;
+            public string Source;
+            public string Location;
             public EventSession(string Time, string Title)
             {
                 this.Time = Time;
@@ -34,6 +36,14 @@ namespace Summit.Controllers
                 this.Title = Title;
                 this.Extra = Extra;
             }
+            public EventSession(string Time, string Title,string Extra,string Source,string Location)
+            {
+                this.Time = Time;
+                this.Title = Title;
+                this.Extra = Extra;
+                this.Source = Source;
+                this.Location = Location;
+            }
         }
         public class EventDay
         {
@@ -44,6 +54,8 @@ namespace Summit.Controllers
         {
             public List<EventSession> Sessions;
         }
+        
+        
         public ActionResult Index(string Region, string Program)
         {
             ViewBag.Title = "Home Page";
@@ -82,6 +94,8 @@ namespace Summit.Controllers
                                                                   };
             ViewBag.Agenda = GetAgenda(Region, Program);
             ViewBag.Sessions = GetSessions(Region, Program);
+            ViewBag.TravelerNotes = GetTravelerNotes(Region, Program);
+            ViewBag.Checklist = GetTravelerChecklist(Region, Program);
             return View();
         }
 
@@ -467,6 +481,52 @@ namespace Summit.Controllers
             }
             return Agenda;
         }
+
+        public List<EventSession> GetTravelerNotes(string region, string Program)
+        {
+            List<EventSession> TEvents = new List<EventSession>();
+            switch (region.ToLower())
+            {
+                case "austin": TEvents.Add(new EventSession("5/5/18 - 5/6/18", "Pecan Street Spring Arts Festival", "A free, family event, the Pecan Street Festival is the oldest and largest art festival in Central Texas. Musicians, food vendors, artists and crafts people turn Sixth Street - historically called Pecan Street into a lively street fair where there is something for people of all ages.", "www.pecanstreetfestival.org", "East Sixth Street"));
+                    TEvents.Add(new EventSession("5/6/18 ( 7:30 am - 10:00 am)", "5th Annual Silicon Labs Sunshine Run", "The fifth annual Silicon Labs Sunshine Run will take place on Sunday, May 6 in the heart of downtown Austin on the certified course beginning at Vic Mathias Shores at Town Lake on 900 West Riverside Drive. Funds raised from the race will benefit Austin Sunshine Camps making a positive difference in the lives of Austin’s low-income youth.", "https://thingstodo.austin360.com/venue/auditorium-shores", "Auditorium Shores, 900 W Riverside Dr, Austin, TX 78704"));
+                    break;
+                case "india":
+                    TEvents.Add(new EventSession("5/5/18 - 5/6/18", "Pecan Street Spring Arts Festival", "A free, family event, the Pecan Street Festival is the oldest and largest art festival in Central Texas. Musicians, food vendors, artists and crafts people turn Sixth Street - historically called Pecan Street into a lively street fair where there is something for people of all ages.", "www.pecanstreetfestival.org", "East Sixth Street"));
+                    TEvents.Add(new EventSession("5/6/18 ( 7:30 am - 10:00 am)", "5th Annual Silicon Labs Sunshine Run", "The fifth annual Silicon Labs Sunshine Run will take place on Sunday, May 6 in the heart of downtown Austin on the certified course beginning at Vic Mathias Shores at Town Lake on 900 West Riverside Drive. Funds raised from the race will benefit Austin Sunshine Camps making a positive difference in the lives of Austin’s low-income youth.", "https://thingstodo.austin360.com/venue/auditorium-shores", "Auditorium Shores, 900 W Riverside Dr, Austin, TX 78704"));
+                    break;
+                case "malaysia":
+                    TEvents.Add(new EventSession("5/5/18 - 5/6/18", "Pecan Street Spring Arts Festival", "A free, family event, the Pecan Street Festival is the oldest and largest art festival in Central Texas. Musicians, food vendors, artists and crafts people turn Sixth Street - historically called Pecan Street into a lively street fair where there is something for people of all ages.", "www.pecanstreetfestival.org", "East Sixth Street"));
+                    TEvents.Add(new EventSession("5/6/18 ( 7:30 am - 10:00 am)", "5th Annual Silicon Labs Sunshine Run", "The fifth annual Silicon Labs Sunshine Run will take place on Sunday, May 6 in the heart of downtown Austin on the certified course beginning at Vic Mathias Shores at Town Lake on 900 West Riverside Drive. Funds raised from the race will benefit Austin Sunshine Camps making a positive difference in the lives of Austin’s low-income youth.", "https://thingstodo.austin360.com/venue/auditorium-shores", "Auditorium Shores, 900 W Riverside Dr, Austin, TX 78704"));
+                    break;
+                default:
+                    TEvents.Add(new EventSession("5/5/18 - 5/6/18", "Pecan Street Spring Arts Festival", "A free, family event, the Pecan Street Festival is the oldest and largest art festival in Central Texas. Musicians, food vendors, artists and crafts people turn Sixth Street - historically called Pecan Street into a lively street fair where there is something for people of all ages.", "www.pecanstreetfestival.org", "East Sixth Street"));
+                    break;
+            }
+            return TEvents;
+        }
+        public List<string> GetTravelerChecklist(string region,string Program)
+        {
+            List<string> Checklist = new List<string>();
+            switch (region.ToLower())
+            {
+                case "austin":
+                    Checklist.Add(" Texas State Capital "); Checklist.Add(" Umlauf Sculpture Garden "); Checklist.Add(" Zilker Park "); Checklist.Add(" Lady Bird Lake "); Checklist.Add(" Texas State History Museum "); Checklist.Add(" 360 Bridge "); Checklist.Add(" Mount Bonnell "); Checklist.Add(" Blanton Museum of Art "); Checklist.Add(" University of Texas "); Checklist.Add(" Barton Creek "); Checklist.Add(" Zilker Botanical Garden "); Checklist.Add(" HOPE Outdoor Gallery");
+                    break;
+                case "india":
+                    Checklist.Add(" Texas State Capital "); Checklist.Add(" Umlauf Sculpture Garden "); Checklist.Add(" Zilker Park "); Checklist.Add(" Lady Bird Lake "); Checklist.Add(" Texas State History Museum "); Checklist.Add(" 360 Bridge "); Checklist.Add(" Mount Bonnell "); Checklist.Add(" Blanton Museum of Art "); Checklist.Add(" University of Texas "); Checklist.Add(" Barton Creek "); Checklist.Add(" Zilker Botanical Garden "); Checklist.Add(" HOPE Outdoor Gallery");
+
+                    break;
+                case "malaysia":
+                    Checklist.Add(" Texas State Capital "); Checklist.Add(" Umlauf Sculpture Garden "); Checklist.Add(" Zilker Park "); Checklist.Add(" Lady Bird Lake "); Checklist.Add(" Texas State History Museum "); Checklist.Add(" 360 Bridge "); Checklist.Add(" Mount Bonnell "); Checklist.Add(" Blanton Museum of Art "); Checklist.Add(" University of Texas "); Checklist.Add(" Barton Creek "); Checklist.Add(" Zilker Botanical Garden "); Checklist.Add(" HOPE Outdoor Gallery");
+
+                    break;
+                default:
+                    Checklist.Add(" Texas State Capital "); Checklist.Add(" Umlauf Sculpture Garden "); Checklist.Add(" Zilker Park "); Checklist.Add(" Lady Bird Lake "); Checklist.Add(" Texas State History Museum "); Checklist.Add(" 360 Bridge "); Checklist.Add(" Mount Bonnell "); Checklist.Add(" Blanton Museum of Art "); Checklist.Add(" University of Texas "); Checklist.Add(" Barton Creek "); Checklist.Add(" Zilker Botanical Garden "); Checklist.Add(" HOPE Outdoor Gallery");
+                    break;
+            }
+            return Checklist;
+        }
+
         public JsonResult GetLatitudeLongitude(string Region)
         {
             LatLng LL = null;
