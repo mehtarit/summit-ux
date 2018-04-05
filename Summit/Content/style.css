@@ -1048,3 +1048,19 @@ figure.effect-bubba:hover {
         #imageText{
             margin-left:43px;
         }
+.travelernotes li {
+    border-top: 1px solid black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+
+.travelerchecklist {
+    list-style-type: circle;
+}
+
+    .travelerchecklist li {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+    }
