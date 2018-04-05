@@ -10,8 +10,14 @@
         <nav class="navbar main-menu" role="navigation">
             <div class="container">
                 <div class="navbar-header">
-                    <ul class="navbar-nav nav">
-                        <li><a class="summit_logo" href="#page-top">@ViewBag.Region Summit 2018</a></li>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <ul class="navbar-nav nav" style="width:329px">
+                        <li><a class="summit_logo" href="#page-top" style="font-size:24px">@ViewBag.Region Summit 2018</a></li>
                     </ul>
 
                 </div>
@@ -44,7 +50,7 @@ var program = '@ViewBag.Program'
         <div class="content">
             <div class="event-date">@ViewBag.Date</div>
             <h1 style="font-size:50px">Hello, @ViewBag.Region!!</h1>
-            <h1 style="font-size:50px">ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
+            <h1>ARE YOU EXCITED FOR THIS YEAR'S SUMMIT?</h1>
             @if (ViewBag.Program.ToLower() == "itdp")
             {
                 <p class="lead">
@@ -471,18 +477,19 @@ var program = '@ViewBag.Program'
                         <div class="col-md-1 col-xs-1 col-sm-1">
                             <div class="input-group">
                                 <span class="input-group-btn">
-                                    <span class="btn btn-primary btn-file">
+                                    <span class="btn btn-primary btn-file" id="browseBtn">
                                         Browse… <input type="file" id="imgInp">
                                     </span>
                                 </span>
                             </div>
                         </div>
                         <div class="col-md-10 col-sm-11 col-xs-11">
-                            <input type="text" class="form-control" readonly style="width:85%;background-color:#fff">
+                            <input type="text" class="form-control" id="imageText" readonly style="width:85%;background-color:#fff;">
                         </div>
                         <div class="col-md-1 col-sm-12 col-xs-12 clearfix" id="uploadbtn">
                             <button type="submit" class="btn btn-primary btn-sm" style="float:right" onclick="readURL()">Upload</button>
                         </div>
+                        <span id="errorMsg" style="margin-left:100px;font-size:12px;color:palevioletred;font-weight:300"></span>
                     </div>
                 </div>
             </div>
@@ -539,13 +546,19 @@ var program = '@ViewBag.Program'
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="badgeid" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" id="email" placeholder="Email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="email" class="col-sm-3 control-label">City</label>
                         <div class="col-sm-9">
                             <input type="text" id="city" placeholder="City" class="form-control">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="program" class="col-sm-3 control-label">PROGRAM</label>
+                        <label for="program" class="col-sm-3 control-label">COUNTRY</label>
                         <div class="col-sm-9">
                             <select id="country1" class="form-control">
                                 <option disabled selected="selected">SELECT YOUR COUNTRY</option>

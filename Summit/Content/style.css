@@ -325,8 +325,16 @@ button:focus,
     .jumbotron {
         height: 160vh;
     }
+    .jumbotron .content  h1{
+        font-size:30px;
+    }
     #uploadbtn {
         padding-top: 10px;
+    }
+    #browseBtn {
+        padding: 9px;
+        font-size: 12px;
+        margin-top: 4px;
     }
 }
 
@@ -334,8 +342,19 @@ button:focus,
     .jumbotron {
         height: 223vh;
     }
+        .jumbotron .content h1 {
+            font-size: 30px;
+        }
     #uploadbtn{
         padding-top:10px;
+    }
+    #imageText{
+        margin-left:0px;
+    }
+    #browseBtn {
+        padding: 9px;
+        font-size: 12px;
+        margin-top: 4px;
     }
 }
 .jumbotron .content {
@@ -356,6 +375,7 @@ button:focus,
 .jumbotron .content h1 {
     color       : #ffffff;
     font-weight : bold;
+    font-size: 50px;
     }
 
 .jumbotron .content p.lead {
@@ -1024,4 +1044,7 @@ figure.effect-bubba:hover {
             letter-spacing: 1px;
             font-size: 12px;
             font-weight:500;
+        }
+        #imageText{
+            margin-left:43px;
         }
