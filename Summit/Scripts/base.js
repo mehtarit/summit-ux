@@ -18,13 +18,13 @@
             dir3 = "/img/grads/india/itlp/group3";
         }
     }
-    else if (region === "Austin") {
+    else if (region === "US") {
         if (program.toLowerCase() === "itdp") {
             dir1 = "/img/grads/austin/itdp/group1";
             dir2 = "/img/grads/austin/itdp/group2";
             dir3 = "/img/grads/austin/itdp/group3";
         }
-        else if (program.toLowerCase() === "itlp cohort 1" || program.toLowerCase() === "itlp cohort 2") {
+        else if (program.toLowerCase() === "itlp (fy16-fy18)" || program.toLowerCase() === "leader (  itlp fy19)") {
             dir1 = "/img/grads/austin/itlp/group1";
             dir2 = "/img/grads/austin/itlp/group2";
             dir3 = "/img/grads/austin/itlp/group3";
