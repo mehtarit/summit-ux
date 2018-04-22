@@ -756,8 +756,8 @@ button:focus,
     width: 100%;
 }
 .form-control {
-    height: 46px;
-    padding: 0 20px;
+    height: 37px;
+    padding: 0 15px;
     font-size: 14px;
     line-height: 46px;
     color: #000;

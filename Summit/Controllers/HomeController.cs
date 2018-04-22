@@ -102,7 +102,7 @@ namespace Summit.Controllers
         private List<string> GetSessions(string region, string program)
         {
             List<string> sessions = new List<string>();
-            if (region.ToLower() == "US")
+            if (region.ToLower() == "us")
             {
                 sessions.Add("Ajaz and speaker from DT World");
                 sessions.Add("Digital Transformation panel");

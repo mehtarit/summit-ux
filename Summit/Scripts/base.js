@@ -170,12 +170,12 @@
 
         }
     });
-    $('a').click(function (e) {
-        // Special stuff to do when this link is clicked...
+//    $('a').click(function (e) {
+//        // Special stuff to do when this link is clicked...
 
-        // Cancel the default action
-        e.preventDefault();
-    });
+//        // Cancel the default action
+//        e.preventDefault();
+//    });
     function getBaseUrl(address) {
 
         var path = "";
