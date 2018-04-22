@@ -324,8 +324,10 @@ function register() {
 function submitFeedback() {
     var sessionName = $("#sessionName").val();
     var feedback = $("#feedback").val();
-    var data = {
+    var rating = $("input[name=star]:checked").val();
+    lvar data = {
         session: sessionName,
+        rating: rating,
         feedback: feedback,
         region: region
     }
